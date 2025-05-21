@@ -4,15 +4,17 @@ export default function Card({ item }) {
     //3. item은 CardList에서 전달됩니다.
     //* 먼저 CardList.jsx를 작업해야 합니다!
 
+    const {title, description, category} = item
+
     return (
         <div className="card">
             <div className="card-image">
-                <img src={`https://placehold.co/600x400`} />
+                <img src="https://placehold.co/600x400" alt={title} />
             </div>
             <div className="card-content">
-                <span className="card-category">???</span>
-                <h2 className="card-title">???</h2>
-                <p className="card-description">???</p>
+                <span className="card-category">{category}</span>
+                <h2 className="card-title">{title}</h2>
+                <p className="card-description">{description}</p>
             </div>
         </div>
     );
